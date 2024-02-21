@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+}
+
+.navbar ul li {
+  margin-left: 70px;
+  position: relative;
+}
+
+.navbar ul li a:hover {
+  border-radius: 5px;
+
+  background-color: red;
+}
+.search-box {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 60px;
+  background-color: wheat;
+  border: 1px solid red;
+  border-radius: 20px;
+  clip-path: circle(0% at 100% 0%);
+}
+.search-box.active {
+  clip-path: circle(144% at 100% 0%);
+  transition: 0.4s;
+}
+.search-box input {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  outline: none;
+  color: black;
+}
+#search-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.text h1 {
+  font-size: 50px;
+}
+
+.text p {
+  font-size: 20px;
+  color: #f9f9f9;
+  line-height: 1.6;
+}
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: white solid 0.15em;
+  border-radius: 0.25em;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button p {
+  z-index: 1;
+  color: white;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: red;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: red;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: black;
+}
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2, 29, 78);
+  background: linear-gradient(
+    270deg,
+    rgba(2, 29, 78, 0.681) 0%,
+    rgba(31, 215, 232, 0.873) 60%
+  );
+  color: rgb(4, 4, 38);
+}
+.home {
+  margin: auto;
+  background: url("../image/wallpaperflare.com_wallpaper\ \(333\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  width: 100%;
+  height: 100vh;
+}
+
+.about {
+  margin-top: 300px;
+}
+
+.service-content i {
+  color: black;
+}
+.service-content h4 {
+  color: red;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #00bfff;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #00bfff;
+}
+
+.message,
+.signin {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.signin a {
+  color: #00bfff;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #00bfff;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  background-color: #00bfff;
+}
+
+.submit:hover {
+  background-color: #00bfff96;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.gallery {
+  position: relative;
+  left: 30px;
+  top: 50%;
+}
+.photo img {
+  width: 250px;
+  height: 200px;
+}
+
+.photo img:hover {
+  border: 2px solid red;
+}
+
+.main img {
+  width: 1013px;
+  height: 600px;
+}
+/*** testimonial Start ***/
+
+.testimonial-item {
+  border: 1px solid var(--bs-primary);
+  padding: 20px 20px;
+}
+
+.testimonial-carousel .owl-item img {
+  width: 100px;
+  height: 100px;
+}
+
+.testimonial-carousel.owl-rtl .testimonial-item {
+  direction: ltr !important;
+}
+
+/*** testimonial End ***/
